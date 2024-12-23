@@ -32,6 +32,6 @@ jobs:
         ssh -i ~/.ssh/id_rsa $REMOTE_USER@$REMOTE_HOST << EOF
           sudo systemctl stop tomcat
           rm -rf $TOMCAT_PATH/webapps/ROOT*
-          cp <프로젝트 빌드 경로>/fruit-back-0.0.1-SNAPSHOT.war $TOMCAT_PATH/webapps/ROOT.war
+          cp ~/fruitfruit-back/fruit-back/build/libs/fruit-back-0.0.1-SNAPSHOT.war $TOMCAT_PATH/webapps/ROOT.war
           sudo systemctl start tomcat
         EOF
